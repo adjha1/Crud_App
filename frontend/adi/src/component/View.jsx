@@ -6,13 +6,13 @@ const View = () => {
         viewdata();
     },[])
     const viewdata = async ()=>{
-        const res=await axios.get('http://localhost:3000/users');
+        const res=await axios.get('http://localhost:9000/users');
         console.log(res);
         setUsers(res.data);
     }
 
   return (
-    <div>
+    <div style={{border:'2px solid red', padding:'20px' }}>
         <h1>Show Data</h1>
         <table style={{border: '2px solid red',backgroundColor: 'greenyellow',width: '100%'}}>
             <tr>

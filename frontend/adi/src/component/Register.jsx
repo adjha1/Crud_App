@@ -7,13 +7,13 @@ const Register = () => {
             name: e.target.name.value,
             age: e.target.age.value
         }
-        await axios.post('http://localhost:3000/users', user)
+        await axios.post('http://localhost:9000/users', user)
        alert('User Registered Successfully')
 
     }
   return (
-    <div>
-      <h1 style={{color:'red'}}>Register User</h1>
+    <div style={{border:'2px solid red', padding:'10px'}}>
+      <h1 style={{color:'red'}}>Resister User</h1>
       <form onSubmit={handleregister}>
         <label>Name:</label> <input type='text' name='name' />
         <label>Age:</label> <input type='text' name='age' />
